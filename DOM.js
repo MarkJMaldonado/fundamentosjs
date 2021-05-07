@@ -5,14 +5,14 @@
  */
 
 
-console.log("Hola Mundo DOM");
+// console.log("Hola Mundo DOM");
 
 // paragraphs contendrá un arreglo con los elementos HTML encontrados por getElementsByTagName
-var paragraphs = document.body.getElementsByTagName("p"); // array[p, p, p] sin metodos de array
-var paragraphs2 = document.querySelectorAll("p"); // array[p, p, p] con metodos de array
+// var paragraphs = document.body.getElementsByTagName("p"); // array[p, p, p] sin metodos de array
+// var paragraphs2 = document.querySelectorAll("p"); // array[p, p, p] con metodos de array
 
-console.log("paragraphs ===>", paragraphs);
-console.log("paragraphs2 ===>", paragraphs2);
+// console.log("paragraphs ===>", paragraphs);
+// console.log("paragraphs2 ===>", paragraphs2);
 
 /**
  * Ejercicio 2
@@ -23,9 +23,9 @@ console.log("paragraphs2 ===>", paragraphs2);
 
 // forEach no devuelve un arreglo, solo itera sobre todos los elementos
 // podría utilizar forEach con paragraphs2
-paragraphs2.forEach((p, index) => {
-    p.innerText = `El contenido es: ${p.innerText} y se encuentra en la posición ${index}`;
-});
+// paragraphs2.forEach((p, index) => {
+// p.innerText = `El contenido es: ${p.innerText} y se encuentra en la posición ${index}`;
+// });
 
 // // Utilizaría un for con paragraphs
 // for (let i = 0; i < paragraphs2.length; i++) {
@@ -43,17 +43,17 @@ paragraphs2.forEach((p, index) => {
 
 // Crear nuevos elementos de HTML
 // 1.- Crear el elemento de HTML que deseo. En este caso un paragraph nuevo
-const myNewParagraph = document.createElement("p") // <p></p>
+// const myNewParagraph = document.createElement("p") // <p></p>
 
 // 2.- Agregamos un nodo de texto y lo guardamos en una variable
-const textParagraph = document.createTextNode("Hola Mundo") // "Hola Mundo"
+// const textParagraph = document.createTextNode("Hola Mundo") // "Hola Mundo"
 
 // A paragraph estoy agregando el texto <p></p> agregale "Hola Mundo" adentro 
 // 3.- Agregamos el texto al <p></p>
-myNewParagraph.appendChild(textParagraph)
+// myNewParagraph.appendChild(textParagraph)
 
 // 4.- Agregamos myNewParagraph => <body> <p>"Hola Mundo"</p> </body>
-document.body.appendChild(myNewParagraph)
+// document.body.appendChild(myNewParagraph)
 
 // setAttribute
 
@@ -79,3 +79,43 @@ document.body.appendChild(myNewParagraph)
  * 2.- A la tabla vacia agregar estilos y atributos que agreguen estilo a las celdas
  * 3.- Agregarla dentro de un div con ID "container"
  */
+
+const myNewAnchor = document.createElement("a")
+const anchorLink = document.createTextNode("Buscar en Google")
+myNewAnchor.setAttribute("href")
+myNewAnchor.href = "https://www.google.com.mx/"
+document.body.appendChild(myNewAnchor)
+
+// myNewAnchor.appendChild(textParagraph)
+
+// 4. - Agregamos myNewParagraph => < body > < p > "Hola Mundo" < /p> </body >
+// document.body.appendChild(myNewParagraph)
+
+
+
+const style1 = document.getElementById("head1")
+style1.style.background = "red"
+style1.style.fontSize = "30px"
+    // style1.addEventListener("mouseover")
+
+const style2 = document.getElementById("head2")
+style2.style.background = "yellow"
+style2.style.fontSize = "18px"
+
+const style3 = document.getElementById("head3")
+style3.style.background = "black"
+style3.style.fontSize = "10px"
+style3.style.color = "yellow"
+
+const style4 = document.getElementById("head4")
+style4.style.background = "orange"
+style4.style.fontSize = "50px"
+
+const style5 = document.getElementById("head5")
+style5.style.background = "brown"
+style5.style.fontSize = "25px"
+
+const style6 = document.getElementById("head6")
+style6.style.background = "blue"
+style6.style.fontSize = "45px"
+style6.style.color = "white"
